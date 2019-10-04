@@ -3,12 +3,15 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "axios": "^0.19.0",
+    "dotenv": "^8.1.0",
+    "material-icons": "^0.3.1",
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
     "react-scripts": "3.2.0"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "react-scripts start .env ",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

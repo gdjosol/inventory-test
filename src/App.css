@@ -1,22 +1,232 @@
-.App {
+html {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  position: relative;
+}
+div#root{
+  flex:1 0;
+}
+body {
+  position: relative;
+  flex: 1 0;
+  display: flex;
+  margin: 0;
+  padding: 1vh 1vw;
+  font-family: "Source Sans Pro", sans-serif;
+  background-color: rgba(4, 4, 4, 0.1);
+  background: rgba(6, 82, 86, 1);
+  background: -moz-linear-gradient(45deg, rgba(6, 82, 86, 1) 0%, rgba(6, 82, 86, 1) 36%, rgba(16, 38, 40, 1) 100%);
+  background: -webkit-gradient(
+    left bottom,
+    right top,
+    color-stop(0%, rgba(6, 82, 86, 1)),
+    color-stop(36%, rgba(6, 82, 86, 1)),
+    color-stop(100%, rgba(16, 38, 40, 1))
+  );
+  background: -webkit-linear-gradient(45deg, rgba(6, 82, 86, 1) 0%, rgba(6, 82, 86, 1) 36%, rgba(16, 38, 40, 1) 100%);
+  background: -o-linear-gradient(45deg, rgba(6, 82, 86, 1) 0%, rgba(6, 82, 86, 1) 36%, rgba(16, 38, 40, 1) 100%);
+  background: -ms-linear-gradient(45deg, rgba(6, 82, 86, 1) 0%, rgba(6, 82, 86, 1) 36%, rgba(16, 38, 40, 1) 100%);
+  background: linear-gradient(45deg, rgba(6, 82, 86, 1) 0%, rgba(6, 82, 86, 1) 36%, rgba(16, 38, 40, 1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#065256', endColorstr='#102628', GradientType=1 );
+}
+
+div.App{
+  position: relative;
+  flex: 1 0;
+  display: flex;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+}
+
+div.App div.intro-container {
+  flex: 0 0 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  flex-direction: column;
+}
+div.App div.intro-container h1 {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.9);
+  font-family: "Cairo", sans-serif;
   text-align: center;
+  font-weight: normal;
 }
 
-.App-logo {
-  height: 40vmin;
+div.App div.intro-container span {
+  font-family: "Comfortaa", cursive;
+  font-size: 0.7em;
+  position: absolute;
+  bottom: 15%;
+  color: rgba(255, 255, 255, 0.6);
+}
+div.App div.intro-container p.subtitle {
+  font-family: "Comfortaa", cursive;
+  font-size: 1em;
+  color: rgba(255, 255, 255, 0.6);
+  color:#ffdd14;
+  text-align: center;
+  transition:opacity 0.5s, transform 0.5s;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+div.App div.intro-container p.subtitle.show{
+  opacity:1;
+  transform:scale(1);
+}
+div.App div.intro-container p.subtitle.hide{
+  opacity:0;
+  transform:scale(0);
+}
+
+div.App div.intro-container h2 {
+  font-family: "Comfortaa", cursive;
+}
+
+div.App div.intro-container input {
+  background-color: transparent;
+  outline: none;
+  border: 2px solid rgba(200, 200, 200, 0.2);
+  font-size: 150%;
+  text-align: center;
+  width: 20%;
+  border-radius: 10px;
+}
+
+div.App div.main-container {
+  flex: 1 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+div.App div.main-container div.container {
+  position: relative;
+  width: 500px;
+  height: 80%;
+  margin: 2vh 1vw;
+  flex: 0 0 auto;
+  border-radius: 10px;
+  background-color: rgba(200, 200, 200, 0.2);
+  display: flex;
+  flex-direction: column;
+  font-family: "Montserrat", sans-serif;
+  padding: 1vh 1vw;
+}
+
+div.App div.main-container div.container h1 {
+  font-size: 100%;
+  color: white;
+}
+
+div.App div.main-container div.container div.item-list {
+  flex: 1 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+div.App div.main-container div.container div.item-list div.item {
+  height: 28%;
+  width: 40%;
+  margin: 5% 5% 0 0;
+  background-color: rgba(200, 200, 200, 0.1);
+  border-radius: 10px;
+  flex: 0 0 auto;
+  transition: border-radius 0.5s, background-color 0.5s;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+div.App div.main-container div.container div.item-list div.item div.header {
+  text-align: center;
+  flex: 0 0 20%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: 15% 0 0 0;
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+div.App div.main-container div.container div.item-list div.item div.header h1 {
+  text-align: center;
+  flex: 0 0 20%;
+}
+div.App div.main-container div.container div.item-list div.item div.body {
+  flex: 1 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  transition: opacity 0.5s;
+  margin: 0 0 10% 0;
+}
+div.App div.main-container div.container div.item-list div.item div.body div.item-detail {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  text-align: center;
+  margin-right: 5%;
+}
+div.App div.main-container div.container div.item-list div.item div.body div.item-detail h2 {
+  font-size: 85%;
 }
 
-.App-link {
-  color: #09d3ac;
+div.App div.main-container div.container div.item-list div.item h1 {
+  font-size: 100%;
+}
+
+div.App div.main-container div.container div.item-list div.item > img {
+  position: absolute;
+  margin: 20%;
+  height: 60%;
+  width: 60%;
+  z-index: 0;
+  opacity: 0.2;
+}
+
+div.App div.main-container div.container div.item-list div.item:hover {
+  border-radius: 50%;
+  background-color: transparent;
+  z-index: 3;
+}
+
+div.App div.main-container div.container div.item-list div.item:hover > .header,
+div.App div.main-container div.container div.item-list div.item:hover > .body {
+  opacity: 0;
+}
+
+div.App div.main-container div.container div.item-list div.item:hover div.hover-container {
+  opacity: 1;
+  width: 200%;
+  -webkit-box-shadow: 5px 5px 18px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 5px 5px 18px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 5px 5px 18px 0px rgba(0, 0, 0, 0.75);
+}
+
+div.App div.main-container div.container div.item-list div.item div.hover-container {
+  position: absolute;
+  width: 100%;
+  background-color: rgba(6, 82, 86, 1);
+  height: 100%;
+  border-radius: 2vh;
+  border-top-left-radius: 10vh;
+  border-bottom-left-radius: 10vh;
+  opacity: 0;
+  transition: opacity 0.5s, width 0.5s, box-shadow 0.5s;
+  box-shadow: none;
+  display:flex;
+  padding-left:1vw;
+}
+div.App div.main-container div.container div.item-list div.item div.hover-container div.item-detail{
+  flex:0 0 10%;
+}
+div.App div.main-container div.container div.item-list div.item div.hover-container div.item-detail div.item{
+  flex:0 0 auto;
+  width:40%;
+  height:auto;
 }
